@@ -11,6 +11,7 @@ const Main = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 39px 60px 0px #00000024;
 
     .cards{
         width: 100%;

@@ -28,20 +28,31 @@ function App() {
     expYear: "",
     CVC: ""
   });
+  const formattedCardNumber = ():string => {
+    if(cardDetails.number === '')
+      return "0000 0000 0000 0000";
+    let temp = cardDetails.number.split(' ');
+    for(let i = 0; i < 4; i++){
+      if(i >= temp.length)
+        temp[i] = '';
+      temp[i] = temp[i].padEnd(4, '0');
+    }
+    return temp.join(' ');
+  } 
 
   return (
     <Main>
       <div className="cards">
         <div className="back-card">
-          <h1 className="CVC-font">000</h1>
+          <h1 className="CVC-font">{cardDetails.CVC.padStart(3, '0')}</h1>
         </div>
         <div className="front-card">
           <img src={CardLogo} alt="card logo" className="h-[30px] lg:h-[47px]"/>
           <div className="front-details">
-            <h1 className="card-number">0000 0000 0000 0000</h1>
+            <h1 className="card-number">{formattedCardNumber()}</h1>
             <div className="name-date-div">
-              <h1>JANE APPLESEED</h1>
-              <h1>00/00</h1>
+              <h1>{cardDetails.name.trim() === "" ? "JANE APPLESEED" : cardDetails.name.toUpperCase()}</h1>
+              <h1>{cardDetails.expMonth.padStart(2, '0')}/{cardDetails.expYear.padStart(2, '0')}</h1>
             </div>
           </div>
         </div>
