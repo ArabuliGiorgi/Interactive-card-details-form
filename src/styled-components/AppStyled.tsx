@@ -90,6 +90,56 @@ const Main = styled.div`
         background-position: 0 0;
         z-index: -1;
     }
+
+    @media only screen and (min-width: 1400px){
+        flex-direction: row;
+
+        .cards{
+            width: 705px;
+            min-height: 100vh;
+
+            .back-card{
+                width: 447px;
+                height: 245px;
+                top: calc(50% + 18px);
+                right: 0;
+
+                .CVC-font{
+                    font-size: 14px;
+                    line-height: 17.86px;
+                    letter-spacing: 2px;
+                    top: 111px;
+                    right: 57px;
+                }
+            }
+            .front-card{
+                width: 447px;
+                height: 245px;
+                left: 164px;
+                bottom: calc(50% + 18px);
+                padding: 28px 32px 26.5px;
+
+                .card-number{
+                    font-size: 28px;
+                    line-height: 35.73px;
+                    letter-spacing: 3.42px;
+                }
+                .name-date-div{
+                    margin-top: 25.5px;
+                }
+                .name-date-div h1{
+                    font-size: 14px;
+                    line-height: 17.86px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        .cards::before{
+            width: 483px;
+            height: 100%;
+            background-image: url(${DesktopBack});
+        }
+    }
 `
 
 export {Main}

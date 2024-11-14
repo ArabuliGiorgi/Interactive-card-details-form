@@ -39,6 +39,9 @@ const Form = styled.div`
             text-align: left;
             color: #21092F;
         }
+        input:hover{
+            cursor: pointer;
+        }
         input::placeholder{
             font-size: 18px;
             font-weight: 500;
@@ -88,6 +91,26 @@ const Form = styled.div`
             font-weight: 500;
             line-height: 22.97px;
             color: #FFFFFF;
+        }
+    }
+
+    @media only screen and (min-width: 1400px){
+        margin: 0 227px 0 0;
+        padding: 0;
+        max-width: 381px;
+
+        .threeInputGroup{
+            gap: 20px;
+
+            .exp-inputs{
+                gap: 10px;
+            }
+        }
+        #cardnumber-div, .threeInputGroup{
+            margin-top: 26px;
+        }
+        button{
+            margin-top: 26px;
         }
     }
 `

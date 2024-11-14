@@ -47,6 +47,12 @@ const Submitted = styled.div`
             color: white;
         }
     }
+
+    @media only screen and (min-width: 1400px){
+        max-width: 381px;
+        margin: 0 227px 0 0;
+        padding: 0;
+    }
 `
 
 export {Submitted}
