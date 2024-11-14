@@ -32,6 +32,12 @@ const Form = styled.div`
             border-radius: 8px;
             height: 45px;
             padding: 0 16px;
+
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22.97px;
+            text-align: left;
+            color: #21092F;
         }
         input::placeholder{
             font-size: 18px;
@@ -40,6 +46,9 @@ const Form = styled.div`
             text-align: left;
             color: #21092F;
             opacity: 0.25;
+        }
+        input:focus{
+            border: 1px solid #6348FE !important;
         }
         p{
             font-size: 12px;

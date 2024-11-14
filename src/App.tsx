@@ -48,7 +48,7 @@ function App() {
         </div>
         <div className="front-card">
           <img src={CardLogo} alt="card logo" className="h-[30px] lg:h-[47px]"/>
-          <div className="front-details">
+          <div className="w-[100%]">
             <h1 className="card-number">{formattedCardNumber()}</h1>
             <div className="name-date-div">
               <h1>{cardDetails.name.trim() === "" ? "JANE APPLESEED" : cardDetails.name.toUpperCase()}</h1>
